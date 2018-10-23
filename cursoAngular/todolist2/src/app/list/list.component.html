@@ -1,0 +1,20 @@
+<div class="container">
+  <!--list of items-->
+<div class="row justify-content-md-center">
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-action" *ngFor="let it of items">
+      <span>{{it.name}}</span>
+      <span class="badge">badge</span>
+      <div class="pull-right">
+        <button class="btn btn-primary-xs fa fa-pencil" (click)="onEdit(item)"></button>
+        <button class="btn btn-danger btn-xs fa fa-trash" (click)="onRemove(it)"></button>
+      </div>
+    </li>
+  </ul>
+</div>
+  <div class="row justify-content-md-center">
+    <nav>
+      <a routerLink="/new-items" class="pull-right">New Item</a>
+    </nav>
+  </div>
+</div>
